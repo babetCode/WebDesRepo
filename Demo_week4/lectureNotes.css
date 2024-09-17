@@ -1,0 +1,31 @@
+/* 1 
+1 pt is 1/72 inch
+1 px
+percent (%) 100% is relative to baseline unit
+EM scaled on parent element, REM (root EM) based on HTML tag (what is tailwind or bootstrap?)
+
+<em> text </em> in line italics (emphasis) styling ----- used to be <i>
+<strong> text </strong> in line italics (emphasis) styling used to be <b>
+
+
+CDN content delivery network
+
+font-weight: multiple-of-100
+or
+font-weight: multiple-of-100
+
+text-align: justify ----- Rivers and valleys are terms for 
+
+text-intent:
+
+text-shadow:
+
+text-decoration:none ----- gets rid of underlined links
+
+color: rgba(255,0,0, 0.5) ----- alphatransparency of .5
+
+letter-spacing: .03em
+
+
+
+*/
