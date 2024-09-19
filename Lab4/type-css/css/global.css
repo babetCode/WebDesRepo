@@ -1,5 +1,43 @@
+html{
+	background-color: black;
+	font-size: 14pt;
+}
+
 .container{
-	width: 750px;
+	width: 370pt;
 	margin: 0 auto;
 	padding: 50px 0;
+}
+
+body{
+	color: #F2F2F2;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+	color: #D98B84;
+	font-family: 'Cinzel', serif;
+	font-weight: 400;
+}
+
+p{
+	font-family: 'Urbanist', sans-serif;
+	font-weight: 100;
+	line-height: 1.5rem;
+}
+
+li{
+	font-family: 'Urbanist', sans-serif;
+	font-weight: 100;
+}
+
+blockquote{
+	font-style: italic;
+}
+
+a{
+	color: #F2EDD0;
+}
+a:hover{
+	color: #73020C;
 }
