@@ -4,3 +4,7 @@ body {
     margin: 0;
     /* Use the Roboto font-family for the body */
 }
+
+#top {
+    background-color: #39D0f2;
+}
