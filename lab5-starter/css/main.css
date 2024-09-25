@@ -39,7 +39,7 @@ section {
     border-left: 10px solid #333333;
     border-right: 10px solid #333333;
     /* padding: 2rem, 0; */
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-bottom: 2rem;
 }
 
@@ -60,11 +60,9 @@ h1, h2 {
     font-family: "Luckiest Guy", cursive;
     font-size: 3rem;
     padding-left: 2rem;
-    line-height: 3rem;
     text-align: center;
     color: #125DC0; /* Dark blue (#125DC0) */
     background-color: #F2E85E; /* Light yellow background for headers (#F2E85E) */
-    margin: 0;
 }
 
 h2 {
