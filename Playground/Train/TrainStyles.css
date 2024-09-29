@@ -1,0 +1,98 @@
+/*Add the styling needed to match the mockup. Refer to the styleguide for font and color info*/
+
+html{
+    background-color: #F33947;
+    font-size: 12pt;
+}
+
+body {
+    margin: 0;
+    /* Use the Roboto font-family for the body */
+    font-family: "Roboto";
+}
+
+#top, #bottom {
+    font-family: "Roboto";
+    color: #125DC0;
+    padding: 1rem;
+    background-color: white;
+}
+
+#top {
+    text-align: left;
+    border-bottom: 10px solid #333333;
+    margin-bottom: 0pt;
+}
+
+#top img {
+    display: block;
+    width: 10%; /* Set width to slightly less than 100% */
+    max-width: 8rem;
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 1pt;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#bottom {
+    text-align: right;
+    border-top: 10px solid #333333;
+}
+
+
+/* Section Styling */
+section {
+    background-color: #D9C35A; /* Yellow background (#F2E85E) */
+    max-width: 380pt;
+    margin: auto; /* Center the content */
+    /* border: 10px solid #333333; */
+    border-left: 10px solid #333333;
+    border-right: 10px solid #333333;
+    /* padding: 2rem, 0; */
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+/* Image styling */
+section img {
+    display: block;
+    width: 95%; /* Set width to slightly less than 100% */
+    height: auto; /* Maintain aspect ratio */
+    margin: auto; /* Center the image and add spacing */
+    border: 7px solid #333333; /* Border around the image */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Heading styles */
+h1, h2 {
+    font-family: "Luckiest Guy", cursive;
+    font-size: 3rem;
+    padding-left: 2rem;
+    text-align: center;
+    color: #125DC0; /* Dark blue (#125DC0) */
+    background-color: #F2E85E; /* Light yellow background for headers (#F2E85E) */
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: left;
+    margin: 0;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1rem;
+    line-height: 1.3;
+    color: #333333; /* Dark gray text (#333333) */
+    margin: 0.5rem 2rem 0rem;
+
+}
+
+.important {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #333333; /* Bold text color (#333333) */
+}
