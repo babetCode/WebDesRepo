@@ -5,3 +5,92 @@
  * modify the accompanying HTML to create
  * the style and layout described in the assignment.
  *****************************************************/
+
+ .container {
+    display: flex;
+}
+
+ body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #F2A4F5;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2.5rem;
+    border-bottom: 1px solid #000;
+}
+
+footer {
+    font-size: 0.8rem;
+    border: 1px solid #000;
+    background-color: #A4D8F5;
+    padding: 1rem;
+}
+
+.sidebar {
+    background-color: #F5D2A5;
+    width: 33%;
+    padding: 1rem;
+    border: 1px solid #000;
+}
+
+main {
+    background-color: #C3F5A4;
+    width: 67%;
+    padding: 1rem;
+    border: 1px solid #000;
+}
+
+
+img {
+    float: left;
+    max-width: 50%;
+    padding-right: 1rem;
+}
+
+/* Additional styles */
+h1, h2 {
+    margin: 0;
+}
+
+p, ul {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ /* header{
+    background-color: #F2A4F5;
+    padding: 1rem;
+    font-family: 'Outfit';
+ }
+
+ footer{
+    background-color: #A4D8F5;
+    padding: 1rem;
+
+ }
+
+ aside{
+    background-color: #F5D2A5;
+    padding: 1rem;
+
+ }
+
+ main{
+    background-color: #C3F5A4;
+    padding: 1rem;
+
+ }
+
+ img{
+    float: left;
+ } */
