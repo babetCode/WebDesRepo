@@ -18,7 +18,7 @@ body{
 }
 
 #main-header #mainheaderlogo{
-    max-width: 99pt;
+    max-width: 60pt;
     transition: all ease 0.3s;
     margin-left: 2vw;
 }
@@ -41,7 +41,7 @@ body{
     padding: 0pt;
     list-style-type: none;
     display: flex;
-    gap: 4vw;
+    gap: 1vw;
 }
 
 #main-header ul a{
@@ -50,15 +50,13 @@ body{
     text-transform: uppercase;
     font-weight: bold;
     font-size: 0.8rem;
-    padding: 5pt 10pt;
     display: block;
     transition: all ease .4s;
     border-radius: 2pt;
 }
 
 #main-header ul a:hover{
-    background-color: brown;
-    color: snow;
+    color: brown;
 }
 
 #hero{
