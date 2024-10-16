@@ -1,0 +1,73 @@
+html{
+    font-size: 14pt;
+}
+
+body{
+    margin: 0pt;
+    background-color: snow;
+}
+
+#main-header{
+    background-color: snow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10pt;
+    border-bottom: 1pt solid brown;
+    box-shadow: 0 0 10pt rgb(0, 0, 0.2);
+}
+
+#main-header #mainheaderlogo{
+    max-width: 99pt;
+    transition: all ease 0.3s;
+    margin-left: 2vw;
+}
+
+#main-header #socials img{
+    max-width: 20pt;
+    transition: all ease 0.3s;
+}
+
+#main-header #socials a{
+    text-decoration: none;
+}
+
+#main-header #mainheaderlogo:hover{
+    opacity: 30%;
+}
+
+#main-header ul{
+    margin: 0pt;
+    padding: 0pt;
+    list-style-type: none;
+    display: flex;
+    gap: 4vw;
+}
+
+#main-header ul a{
+    text-decoration: none;
+    color: #444;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 5pt 10pt;
+    display: block;
+    transition: all ease .4s;
+    border-radius: 2pt;
+}
+
+#main-header ul a:hover{
+    background-color: brown;
+    color: snow;
+}
+
+#hero{
+    width: 100%;
+    margin: 0pt;
+    padding: 0pt;
+}
+
+#hero img{
+    display: block;
+    width: 100%;
+}
