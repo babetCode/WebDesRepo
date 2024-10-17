@@ -4,28 +4,35 @@ html{
 
 body{
     margin: 0pt;
-    background-color: snow;
+    background-color: ivory;
 }
 
 #main-header{
     background-color: snow;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 10pt;
+    align-items: flex-end;
+    padding: 0pt;
     border-bottom: 1pt solid brown;
     box-shadow: 0 0 10pt rgb(0, 0, 0.2);
 }
 
 #main-header #mainheaderlogo{
-    width: 10vw;
-    max-width: 99pt;
+    width: 80pt;
     transition: all ease 0.3s;
-    margin-left: 2vw;
+    padding: 2pt 15pt 0pt;
+}
+
+#main-header #mainheaderlogo:hover{
+    opacity: 50%;
+    width: 84pt;
+    /* max-width: 80pt; */
+    padding: 0pt 13pt;
 }
 
 #main-header #socials {
     display: flex;
+    gap: 1vw;
 }
 
 #main-header #socials img{
@@ -37,8 +44,8 @@ body{
     text-decoration: none;
 }
 
-#main-header #mainheaderlogo:hover{
-    opacity: 30%;
+#main-header #socials a:hover{
+    opacity: 50%;
 }
 
 #main-header ul{
@@ -94,7 +101,7 @@ body{
         background-color: snow;
         position: absolute;
         top: 50px;  /* Adjust as needed */
-        right: 10px;  /* Adjust as needed */
+        left: 10px;  /* Adjust as needed */
         box-shadow: 0 2pt 10pt rgba(0, 0, 0, 0.1);
         padding: 10pt;
     }
