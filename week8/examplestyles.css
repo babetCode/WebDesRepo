@@ -18,9 +18,14 @@ body{
 }
 
 #main-header #mainheaderlogo{
-    max-width: 60pt;
+    width: 10vw;
+    max-width: 99pt;
     transition: all ease 0.3s;
     margin-left: 2vw;
+}
+
+#main-header #socials {
+    display: flex;
 }
 
 #main-header #socials img{
@@ -42,6 +47,7 @@ body{
     list-style-type: none;
     display: flex;
     gap: 1vw;
+    transition: all ease .4s
 }
 
 #main-header ul a{
@@ -56,7 +62,8 @@ body{
 }
 
 #main-header ul a:hover{
-    color: brown;
+    background-color: brown;
+    color: snow;
 }
 
 #hero{
@@ -68,4 +75,60 @@ body{
 #hero img{
     display: block;
     width: 100%;
+}
+
+#dropdown-menu {
+    display: none;
+
+}
+
+/* Media Query for small screens */
+@media (max-width: 768px) {
+    #main-header ul {
+        display: none;  /* Hide the list on small screens */
+    }
+    #dropdown-menu {
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        background-color: snow;
+        position: absolute;
+        top: 50px;  /* Adjust as needed */
+        right: 10px;  /* Adjust as needed */
+        box-shadow: 0 2pt 10pt rgba(0, 0, 0, 0.1);
+        padding: 10pt;
+    }
+    #dropdown-menu.show {
+        visibility: visible;
+        height: auto;
+        opacity: 1;
+    }
+    #dropdown-menu a {
+        padding: 10pt;
+        color: #444;
+        text-decoration: none;
+    }
+    #dropdown-menu a:hover {
+        background-color: brown;
+        color: snow;
+    }
+    #hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        position: relative;
+    }
+    #hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: #444;
+        margin: 4pt 0;
+        transition: all 0.3s ease;
+    }
+    #hamburger:hover + #dropdown-menu, 
+    #dropdown-menu:hover {
+        visibility: visible;
+        height: auto;
+        opacity: 1;
+    }
 }
