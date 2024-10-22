@@ -1,3 +1,14 @@
+"""
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+
+Code Status: In Progress
+________________________________________________________________________
+
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+Author: | GitHub:| Email:  
+_______________________________________________________________________________
+"""
+
 user_name = "z41z517"
 pass_word = 'wRiteItdown1?'
 
@@ -12,53 +23,68 @@ import time
 # Step 1: Initialize WebDriver
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
-# Step 2: Navigate to the login page
+# Step 2: Navigate to page (this redirects to login)
 driver.get("https://www.montana.edu/search/students.html")
 
 # Step 3: Wait for the login page to load and input your credentials
-# Adjust the selectors as needed based on the page's HTML structure
 username_input = WebDriverWait(driver, 10).until(
-    EC.visibility_of_element_located((By.ID, "username"))  # Change 'username' if incorrect ID
+    EC.visibility_of_element_located((By.ID, "username"))
 )
 username_input.send_keys(user_name)
 
 password_input = WebDriverWait(driver, 10).until(
-    EC.visibility_of_element_located((By.ID, "password"))  # Change 'password' if incorrect ID
+    EC.visibility_of_element_located((By.ID, "password"))
 )
 password_input.send_keys(pass_word)
 
 # Step 4: Submit the login form
-login_button = driver.find_element(By.CSS_SELECTOR, ".btn-submit")  # Adjust based on the ID or button selector
+login_button = driver.find_element(By.CSS_SELECTOR, ".btn-submit")
 login_button.click()
 
-# Step 5: Handle Duo 2FA - Wait for iframe, switch to it
-WebDriverWait(driver, 20).until(EC.frame_to_be_available_and_switch_to_it((By.TAG_NAME, "iframe")))
+print("Waiting for Duo 2FA approval... \
+    Please approve the login on your mobile device.")
 
-# Wait for Duo prompt to appear (manually approve on your phone)
+WebDriverWait(driver, 30).until(
+    EC.url_contains(
+        "https://api-160ed6ec.duosecurity.com/frame/v4/auth/prompt")
+)
+print("Navigated to Duo 2FA page.")
+
 duo_push_button = WebDriverWait(driver, 20).until(
-    EC.element_to_be_clickable((By.CSS_SELECTOR, "button[class*='push-button']"))  # Adjust CSS selector as needed
+    EC.element_to_be_clickable((By.ID, "dont-trust-browser-button"))
 )
 duo_push_button.click()
 
-# Step 6: Wait for user to approve the 2FA on their mobile device
-print("Waiting for Duo 2FA approval... Please approve the login on your mobile device.")
-
-# Add a long wait to give time for you to approve the push
-time.sleep(30)  # Adjust as needed, based on how long you need for the approval process
-
-# Step 7: Once approved, Selenium will continue to the next page
 print("2FA approved, continuing...")
 
-# Step 8: Now, interact with the authenticated page or scrape the data
-# Example: Extract content after successful login
-WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.TAG_NAME, "h1")))  # Adjust based on page content
-page_content = driver.page_source
-
+# page_content = driver.page_source
 # Print or save the page content as needed
-print(page_content)
+# print(page_content)
+
+search_input = WebDriverWait(driver, 10).until(
+    EC.visibility_of_element_located((By.ID, "gsc-i-id1"))
+)
+search_input.send_keys('ab')
+
+search_push_button = WebDriverWait(driver, 20).until(
+    EC.element_to_be_clickable((By.CSS_SELECTOR, ".gsc-search-button"))
+)
+search_push_button.click()
+
+time.sleep(1)
+
+driver.get(
+    "https://www.montana.edu/cope/emp-dir/api/directory-v2.php?\
+    query=ab&queryType=students"
+)
+time.sleep(1)
+driver.get(
+    "https://www.montana.edu/cope/emp-dir/api/directory-v2.php?\
+    query=ac&queryType=students"
+)
 
 for i in range(30):
-    print(30-i)
+    print(30-i, end=' ', flush=True)
     time.sleep(1)
 # Close the driver when done
 driver.quit()

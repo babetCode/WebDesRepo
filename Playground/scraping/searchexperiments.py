@@ -1,6 +1,5 @@
 user_name = "z41z517"
 pass_word = 'wRiteItdown1?'
-search = 'adrien'
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
