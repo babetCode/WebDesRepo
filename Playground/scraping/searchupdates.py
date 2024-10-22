@@ -60,9 +60,15 @@ search_push_button = WebDriverWait(driver, 20).until(
 )
 search_push_button.click()
 
+
+
 driver.get("https://www.montana.edu/cope/emp-dir/api/directory-v2.php?query=ab&queryType=students")
 time.sleep(5)
 driver.get("https://www.montana.edu/cope/emp-dir/api/directory-v2.php?query=ac&queryType=students")
+
+body_text = driver.find_element(By.TAG_NAME, "body").text
+
+print(body_text[:100])
 
 for i in range(30):
     print(30-i, end=' ', flush=True)
