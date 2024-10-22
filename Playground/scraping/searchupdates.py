@@ -60,13 +60,14 @@ search_push_button = WebDriverWait(driver, 20).until(
 )
 search_push_button.click()
 
+alphabet = [chr(i) for i in range(97, 123)]
 
+for one in alphabet:
+    for two in alphabet:
+        driver.get(f"https://www.montana.edu/cope/emp-dir/api/directory-v2.php?query={one}{two}&queryType=students")
+        body_text = driver.find_element(By.TAG_NAME, "body").text
+        body
 
-driver.get("https://www.montana.edu/cope/emp-dir/api/directory-v2.php?query=ab&queryType=students")
-time.sleep(5)
-driver.get("https://www.montana.edu/cope/emp-dir/api/directory-v2.php?query=ac&queryType=students")
-
-body_text = driver.find_element(By.TAG_NAME, "body").text
 
 print(body_text[:100])
 
