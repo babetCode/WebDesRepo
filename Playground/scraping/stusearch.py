@@ -73,14 +73,17 @@ search_push_button.click()
 
 time.sleep(1)
 
+one = 'a'
+two = 'b'
+
 driver.get(
-    "https://www.montana.edu/cope/emp-dir/api/directory-v2.php?\
-    query=ab&queryType=students"
+    f"https://www.montana.edu/cope/emp-dir/api/directory-v2.php?\
+    query={one}{one}&queryType=students"
 )
 time.sleep(1)
 driver.get(
-    "https://www.montana.edu/cope/emp-dir/api/directory-v2.php?\
-    query=ac&queryType=students"
+    f"https://www.montana.edu/cope/emp-dir/api/directory-v2.php?\
+    query={one}{two}&queryType=students"
 )
 
 for i in range(30):
