@@ -32,13 +32,28 @@ password_input.send_keys(pass_word)
 login_button = driver.find_element(By.CSS_SELECTOR, ".btn-submit")  # Adjust based on the ID or button selector
 login_button.click()
 
-page_content = driver.page_source
+print("Waiting for Duo 2FA approval... Please approve the login on your mobile device.")
 
+WebDriverWait(driver, 30).until(
+    EC.url_contains("https://api-160ed6ec.duosecurity.com/frame/v4/auth/prompt")
+)
+print("Navigated to Duo 2FA page.")
+
+duo_push_button = WebDriverWait(driver, 20).until(
+    EC.element_to_be_clickable((By.ID, "dont-trust-browser-button"))  # Adjust CSS selector as needed
+)
+duo_push_button.click()
+
+print("2FA approved, continuing...")
+
+# page_content = driver.page_source
 # Print or save the page content as needed
-print(page_content)
+# print(page_content)
 
 for i in range(30):
-    print(30-i, end=' ')
+    print(30-i, end=' ', flush=True)
     time.sleep(1)
 # Close the driver when done
 driver.quit()
+
+# https://www.montana.edu/cope/emp-dir/api/directory-v2.php?query=ab&queryType=students
