@@ -1,10 +1,10 @@
 import pandas as pd
-download_path = 'C:/Users/goper/Downloads/stusorted.csv'
-df = pd.read_csv('Playground\scraping\stuscraped.csv')
+df = pd.read_csv('Playground/scraping/stusorted.csv')
 
-if df.columns[1] == 'first':
-    print('same')
+unique = []
 
-sf = df.sort_values(by=['first', 'last'])
+for i in df['first']:
+    if i not in unique:
+        unique.append(i)
 
-sf.to_csv(download_path)
+print(unique)
