@@ -54,7 +54,7 @@ body{
     padding: 0pt;
     list-style-type: none;
     display: flex;
-    gap: 3vw;
+    gap: 0pt;
     transition: all ease .4s
 }
 
@@ -66,6 +66,7 @@ body{
     font-size: 0.8rem;
     display: block;
     transition: all ease .4s;
+    padding: 0pt 10pt;
     border-radius: 2pt;
 }
 
@@ -91,7 +92,7 @@ body{
 }
 
 /* Media Query for small screens */
-@media (max-width: 768px) {
+@media (max-width: 670pt) {
     #main-header ul {
         display: none;  /* Hide the list on small screens */
     }
