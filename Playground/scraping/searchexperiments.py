@@ -96,7 +96,7 @@ for one in alphabet:
                 print(counter, end=' ', flush=True)
 print(len(total_list))
 df = pd.DataFrame(total_list)
-df.to_csv(download_path)
+# df.to_csv(download_path)
 
 for i in range(30):
     print(30-i, end=' ', flush=True)
