@@ -5,6 +5,6 @@
 }
 
 #hero img{
-    display: block;
+    display: flex;
     width: 100%;
 }

@@ -5,6 +5,7 @@ html{
 body, iframe {
     margin: 0;
     padding: 0;
+    height: 0;
 }
 
 body{
@@ -20,6 +21,7 @@ body{
     padding: 0pt;
     border-bottom: 1pt solid brown;
     box-shadow: 0 0 10pt rgb(0, 0, 0.2);
+    height: 50pt;
 }
 
 #main-header #mainheaderlogo{
