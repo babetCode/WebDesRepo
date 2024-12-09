@@ -126,12 +126,3 @@ while True:
     user_input_box.send_keys(Keys.RETURN)
 
     sleep(10)
-
-
-
-# Wait for user input before closing the browsers
-input("Press Enter to quit the browsers...")
-
-# Close the browsers
-driver.quit()
-driver2.quit()
