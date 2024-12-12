@@ -89,6 +89,10 @@ while True:
     # for char in combined_text:
     #     user_input_box2.send_keys(char)
     #     sleep(0.001)
+    maybe_later_buttons2 = driver2.find_elements(By.CSS_SELECTOR, 'button[title="Maybe later"]')
+    if maybe_later_buttons2:
+        maybe_later_buttons2[0].click()
+        sleep(2)
     user_input_box2.send_keys(combined_text)
 
     # sleep(2)
@@ -120,6 +124,10 @@ while True:
     # for char in combined_text:
     #     user_input_box.send_keys(char)
     #     sleep(0.001)
+    maybe_later_buttons = driver.find_elements(By.CSS_SELECTOR, 'button[title="Maybe later"]')
+    if maybe_later_buttons:
+        maybe_later_buttons[0].click()
+        sleep(2)
     user_input_box.send_keys(combined_text + "also please remember to keep the lesson moving forward")
 
     # sleep(2)
